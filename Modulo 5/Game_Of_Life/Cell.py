@@ -14,8 +14,5 @@ class Cell(object):
 
     def update(self):
         stroke(0)
-        if self.is_alive:
-            fill(random(0, 255), random(0, 255), random(0, 255))
-        else:
-            fill("#000000")
+        fill(self.set_color())
         rect(self.x, self.y, self.cell_size, self.cell_size)
